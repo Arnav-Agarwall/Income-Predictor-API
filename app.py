@@ -49,5 +49,10 @@ def predict():
     
     return jsonify({'predicted_income': predicted_class})
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Income Prediction API is running!"
+
+
 if __name__ == '__main__':
     app.run(debug=True)
